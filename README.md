@@ -1,6 +1,6 @@
 # MNIST Digit Classification with CNN
 
-![Python Tests](https://github.com/{owner}/{repo}/actions/workflows/python-test.yml/badge.svg)
+![Python Tests]([![Python Tests](https://github.com/Adityak204/era_v3_session6_assignment/actions/workflows/python-test.yml/badge.svg)](https://github.com/Adityak204/era_v3_session6_assignment/actions/workflows/python-test.yml))
 
 A deep learning project implementing a Convolutional Neural Network (CNN) for classifying handwritten digits using the MNIST dataset. This projects aim to reach 99.4% accuracy on the test set with less than 20k parameters and within 20 epochs.
 
