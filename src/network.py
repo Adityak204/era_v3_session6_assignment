@@ -17,22 +17,22 @@ class Net(nn.Module):
         self.dropout1 = nn.Dropout(0.1)
         self.pool1 = nn.MaxPool2d(
             2, 2
-        )  # input 28x28x8 | Output 14x14x8| RF 7 {r_in:5, r_out:7, j_in:1, j_out:2}
+        )  # input 28x28x8 | Output 14x14x8| RF 6 {r_in:5, r_out:6, j_in:1, j_out:2}
         self.conv2 = nn.Conv2d(
             16, 16, 3, padding=1
-        )  # input 14x14x8 | Output 14x14x16| RF 11 {r_in:7, r_out:11, j_in:2, j_out:2}
+        )  # input 14x14x8 | Output 14x14x16| RF 10 {r_in:6, r_out:10, j_in:2, j_out:2}
         self.bn2 = nn.BatchNorm2d(16)
         self.conv3 = nn.Conv2d(
             16, 16, 3, padding=1
-        )  # input 14x14x16 | Output 14x14x16| RF 15 {r_in:11, r_out:15, j_in:2, j_out:2}
+        )  # input 14x14x16 | Output 14x14x16| RF 14 {r_in:10, r_out:14, j_in:2, j_out:2}
         self.bn3 = nn.BatchNorm2d(16)
         self.dropout2 = nn.Dropout(0.1)
         self.pool2 = nn.MaxPool2d(
             2, 2
-        )  # input 14x14x16 | Output 7x7x16| RF 19 {r_in:15, r_out:19, j_in:2, j_out:4}
+        )  # input 14x14x16 | Output 7x7x16| RF 17 {r_in:14, r_out:17, j_in:2, j_out:4}
         self.conv4 = nn.Conv2d(
             16, 32, 3, padding=1
-        )  # input 7x7x16 | Output 7x7x32| RF 27 {r_in:19, r_out:27, j_in:4, j_out:4}
+        )  # input 7x7x16 | Output 7x7x32| RF 25 {r_in:17, r_out:25, j_in:4, j_out:4}
         self.bn4 = nn.BatchNorm2d(32)
         self.trasition_1 = nn.Conv2d(32, 8, 1)  # input 7x7x32 | Output 7x7x8| RF
         self.fc1 = nn.Linear(8 * 7 * 7, 10)
