@@ -21,7 +21,7 @@ This project implements a custom CNN architecture with:
 
 ## Key Highlights
 
-- Reached receptive field of 27 at the 5th convolutional layer
+- Reached receptive field of 24 at the 5th convolutional layer
 - Made use of different image transformation techniques, Learning Rate scheduler
 - Max accuracy achieved: 99.56% on the test set
 
@@ -65,12 +65,12 @@ Estimated Total Size (MB): 0.72
 |-------|------------|-------------|-----------------|----------|-----------|
 | Conv0 | 28x28x1 | 28x28x16 | 3 | 1 | 1 |
 | Conv1 | 28x28x16 | 28x28x16 | 5 | 1 | 1 |
-| MaxPool1 | 28x28x16 | 14x14x16 | 5 | 1 | 2 |
-| Conv2 | 14x14x16 | 14x14x16 | 11 | 2 | 2 |
-| Conv3 | 14x14x16 | 14x14x16 | 15 | 2 | 2 |
-| MaxPool2 | 14x14x16 | 7x7x16 | 19 | 2 | 4 |
-| Conv4 | 7x7x16 | 7x7x32 | 27 | 4 | 4 |
-| Transition | 7x7x32 | 7x7x8 | 27 | 4 | 4 |
+| MaxPool1 | 28x28x16 | 14x14x16 | 6 | 1 | 2 |
+| Conv2 | 14x14x16 | 14x14x16 | 10 | 2 | 2 |
+| Conv3 | 14x14x16 | 14x14x16 | 14 | 2 | 2 |
+| MaxPool2 | 14x14x16 | 7x7x16 | 16 | 2 | 4 |
+| Conv4 | 7x7x16 | 7x7x32 | 24 | 4 | 4 |
+| Transition | 7x7x32 | 7x7x8 | 24 | 4 | 4 |
 | FC | 7x7x8 | 10 | - | - | - |
 
 ## Training Logs - Showing Test Accuracy and Loss
